@@ -20,19 +20,22 @@
 </head>
 <body>
     <h1>WELCOME!!</h1>
-    {% if breed %}
-        The breed you entered is {{ breed }}
-        Update it in the form below:
-    {% endif %}
 
     <!--Se crea un formulario cuyo método va a ser POST-->
     <form method="POST">
         <!--form es un objeto de InfoForm-->
         {{ form.hidden_tag() }}
-        <!--Para acceder al label y para poner el input. Se ponen los () porque se crean instancias de las clases de tipo de campos-->
-        {{ form.breed.label }} {{ form.breed() }}
 
-        <!--Es posible pasarle una clase para darle estilos-->
+        {{ form.breed.label }} {{ form.breed() }}
+        <br>
+        {{ form.neutered.label }} {{ form.neutered() }}
+        <br>
+        {{ form.food_choice.label }} {{ form.food_choice() }}
+        <br>
+        {{ form.mood.label }} {{ form.mood() }}
+        <br>
+        {{ form.feedback.label }} {{ form.feedback() }}
+        <br>
         {{ form.submit(class="btn btn-primary") }}
     </form>
 
