@@ -19,19 +19,14 @@ def index():
                            listaMascotas=listaMascotas, usuarioLogado=usuarioLogado)
 
 
-
 @app.route('/home')
 def home():
     return render_template('home.html')
 
 
-
 @app.route('/puppy/<name>')
 def puppy_name(name):
     return render_template('puppy.html', name=name)
-
-
-
 
 
 if __name__ == "__main__":

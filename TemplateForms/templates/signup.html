@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Welcome to the signup page!!</h1>
+    <p>Fill out the form!</p>
+
+    <!--FORM: Se utiliza url_for en el action para mandarle los datos a esa vista-->
+    <form action="{{ url_for('thank') }}">
+        <label for="first">First Name:</label>
+        <!--IMP. Recoger el nombre del input con el name para poder obtener luego el dato-->
+        <input type="text" name="first">
+        <label for="last">Last Name:</label>
+        <input type="text" name="last">
+        <input type="submit" value="Submit Form">
+    </form>
+
+</div>
+
+{% endblock %}

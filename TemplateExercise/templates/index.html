@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Welcome to the site!!</h1>
+    <p>Choose a username!!</p>
+        <!--FORM: Se utiliza url_for en el action para mandarle los datos a esa vista-->
+    <form action="{{ url_for('report') }}">
+        <label for="username">Username:</label>
+        <input type="text" name="username">
+        <input type="submit" value="SEND USERNAME">
+    </form>
+</div>
+
+{% endblock %}
