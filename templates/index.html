@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if usuarioLogado %}
+        <h1>Welcome {{ nombre }}!!</h1>
+        <h2>{{ letras }}</h2>
+
+        <!--Se puede usar la lógica de Python en las variables que recibe el template-->
+        <h2>{{ letras[0] }}</h2>
+        <h3>{{ diccionario }} </h3>
+        <h3>{{ diccionario["Nombre"] }}</h3>
+
+        <p>Recorrer una lista con Python</p>
+        <ul>
+            {%for letra in letras %}
+                <li>{{ letra }}</li>
+            {% endfor %}
+        </ul>
+
+        <p>Recorre una lista de mascotas</p>
+        <ul>
+            {%for mascota in listaMascotas %}
+                <li>{{ mascota }}</li>
+            {% endfor %}
+        </ul>
+
+        <p>Condicional</p>
+        {% if 'Rufus' in listaMascotas %}
+            <p>Se ha encontrado a Rufus</p>
+        {% else %}
+            <p>Rufus no está en esta lista</p>
+        {% endif %}
+
+
+        {% else %}
+            <p>Por favor, inicia sesión!</p>
+        {% endif %}
+
+
+</body>
+</html>
