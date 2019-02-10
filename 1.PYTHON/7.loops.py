@@ -91,3 +91,69 @@ print("z" in [1, 2, 3])
 
 # Ver si hay una letra en un string
 print(1 in [1, 2, 3])
+
+# BUCLES PILDORAS
+
+# Estructura FOR => for variable in elemento a recorrer (cadena texto, tupla, lista, rango)
+
+for i in [1, 2, 3]:
+    print("Hola ", i)
+
+# Ejercicio - Comprobar un email
+email = False
+
+for i in "vir@vir.com":
+
+    if i == "@":
+        email = True
+
+if email:
+    print("Email correcto")
+else:
+    print("El email no es correcto")
+
+# Range es un tipo => crea una array o lista de X elementos. En este caso del 0 al 4
+for i in range(5):
+    print(f"Valor de la variable {i}")
+    print("Valor de la variable {}".format(i))
+
+# Desde el 5 al 9
+for i in range(5, 10):
+    print(f"Valor de la variable {i}")
+
+# Desde el 5 al 9 saltando de 3 en 3
+for i in range(5, 10, 3):
+    print(f"Valor de la variable {i}")
+
+# Ejemplo:
+
+valido = False
+
+# Te pide por consola introducir un texto
+email = input("Introduce email")
+
+# Va a recorrer un número de veces igual a la longitud del email introducido
+for i in range(len(email)):
+
+    if email[i] == "@":
+        valido = True
+
+if valido:
+    print("Email correcto")
+else:
+    print("Email incorrecto")
+
+# ELSE DENTRO DE UN BUCLE FOR
+email2 = "lalasasa.com"
+
+for i in email2:
+    if i == "@":
+        arroba = True
+        # Para la ejecución del bucle
+        break
+
+# Cuando el bucle for haya quedado vacío se ejecuta el else. ¿Cuando se ha ejecutado completo?
+else:
+    arroba = False
+
+print(arroba)
