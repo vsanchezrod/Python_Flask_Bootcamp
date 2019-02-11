@@ -2,9 +2,19 @@ from flask import Flask
 # Para montar un API RESTFUL con FLASH
 from flask_restful import Resource, Api
 
+# Para poder realizar el proceso de autenticación
+from secure_check import authenticate, identity
+from flask_jwt import JWT, jwt_required
+
 app = Flask(__name__)
-# API (recibe la app)
+app.config["SECRET_KEY"] = "mysecretkey"
+
+# Se crea un objeto API (recibe la app)
 api = Api(app)
+
+# Se crea un objeto JWT, se le pasa la app, authencate y indetity
+jwt = JWT(app, authenticate, identity)
+
 
 puppies = []
 
@@ -52,9 +62,15 @@ class PuppyNames(Resource):
 
 class AllNames(Resource):
 
+    # Si para hacer una petición es necesario estar autenticado, hay que poner delante del método el decorador
+    @jwt_required()
     def get(self):
         # Va a devolver todas las mascotas
         return {"puppies": puppies}
+
+    # POSTMAN PETICIÓN A BACKEND CON AUTENTICACIÓN
+    # ENDPOINT: http://127.0.0.1:5000/puppies
+    # HEADERS: Authorization: JWT tokennnnnnnnnnnnnnnnnnnnnn
 
 
 # Se crea una clase que hereda de Resource
