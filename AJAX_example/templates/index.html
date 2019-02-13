@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="../../static/js/jquery-3.3.1.min.js"></script>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <h1>jQuery Ajax Example</h1>
+    <input type=text id="a" size=5 name=a> +
+    <input type=text id="b" size=5 name=b> =
+    <span id=result>?</span>
+    <a id="enlace" class="btn btn-primary" id=calculate>calculate server side</a>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#enlace").click(function() {
+              var a = $("#a").val();
+              var b = $("#b").val();
+              $.ajax({
+                url: '/',
+                dataType: 'json',
+                type: 'POST',
+                contentType: 'application/json',
+                data: {'data': a}
+                processData: false,
+                success: function( data, textStatus, jQxhr ){
+                    alert(data.result)
+                    $('#result').html( JSON.stringify( data.result ) );
+                },
+                error: function( jqXhr, textStatus, errorThrown ){
+                    console.log( errorThrown );
+                }
+                });
+            });
+        });
+
+    </script>
+
+    </body>
+</html>
