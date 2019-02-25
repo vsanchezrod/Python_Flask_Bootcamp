@@ -48,6 +48,15 @@ diccionario = {'Asignaturas': lista_asignaturas, 'Notas': lista_notas}
 print(diccionario)
 print('\n')
 
-datafram_notas = pd.DataFrame(diccionario)
-print(datafram_notas)
+dataframe_notas = pd.DataFrame(diccionario)
+print(dataframe_notas)
+print('\n')
+
+# VER ÍNDICES DE UN DATAFRAME
+print(dataframe_notas.index)
+print('\n')
+
+
+# ACCEDER a un ÍNDICE
+print(dataframe_notas.index[0])
 print('\n')

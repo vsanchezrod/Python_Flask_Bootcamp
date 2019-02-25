@@ -42,6 +42,14 @@ print('\n')
 serie_notas_daniel.index.name = "Asignaturas de Daniel"
 print(serie_notas_daniel)
 
+# Devuelve los VALORES DE LOS ÍNDICES EN FORMA DE LISTA. Los índices de las series no soportan cambios
+print(serie_notas_daniel.index)
+print('\n')
+
+# Se puede obtener el primer índice
+print(serie_notas_daniel.index[0])
+print('\n')
+
 # CONVERTIR SERIE A DICCIONARIO (pierde los nombres de la serie y de los índices)
 print('\n')
 diccionario = serie_notas_daniel.to_dict()
