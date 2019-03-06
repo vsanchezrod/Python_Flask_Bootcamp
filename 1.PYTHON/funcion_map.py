@@ -1,7 +1,7 @@
-'''
+"""
     La función MAP sirve para aplicar una función a cada uno de los elementos de una lista
     El RESULTADO será otra lista con los elementos resultantes de aplicarles la función
-'''
+"""
 
 
 # FUNCIÓN
@@ -15,11 +15,11 @@ print(multiplicar(2))
 lista_numeros = [2, 4, 6]
 
 # APLICAR FUNCIÓN MAP
-'''
+"""
     Se utiliza la función map(), que recibe dos parámetros
-    :param función a aplicar
-    :param lista de elementos
-'''
+    :param: función a aplicar
+    :param: lista de elementos
+"""
 mapeo = map(multiplicar, lista_numeros)
 # MAPA
 print(mapeo)

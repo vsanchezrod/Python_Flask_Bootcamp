@@ -1,9 +1,9 @@
 range
 
-'''
+"""
     Una función generadora genera valores sobre la marcha, cada vez que le pedimos uno nos da un valor
     Ej: Un ejemplo de función generadora es la función range
-'''
+"""
 
 # Genera valores desde 0 a 10 (range(0,11)o range(11) es lo mismo
 range(0, 11)
@@ -12,10 +12,10 @@ range(11)
 for numero in range(0, 11):
     print(numero)
 
-'''
+"""
     Se crea una función GENERADORA DE PARES.
     Cada vez que llamemos a la función nos va a dar el siguiente par
-'''
+"""
 
 
 def pares(maximo):

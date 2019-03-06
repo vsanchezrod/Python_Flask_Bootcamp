@@ -11,9 +11,16 @@ suma(3, 5)
 def report_person(name):
     print("Reporting person: " + name)
 
-
 report_person("John")
 
+# n parámetros
+def report_person_con_n_parametros(*names):
+
+    for name in names:
+        print("Reporting person: " + name)
+
+
+report_person_con_n_parametros("John", "Virginia", "Pedro")
 
 # Se puede definir una valor por defecto para el parámetro por si no lo recibe
 def report_person2(name="Sin Nombre"):

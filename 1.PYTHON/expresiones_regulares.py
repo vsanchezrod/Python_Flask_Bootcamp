@@ -91,13 +91,13 @@ print('\n')
 
 print('MÉTODO SPLIT() => DIVIDE UNA CADENA A PARTIR DE UN PATRÓN')
 print('\n')
-'''
+"""
     Método split() del módulo re: divide una cadena a partir de un patrón
-    :param patrón
-    :param cadena de texto
+    :param: patrón
+    :param: cadena de texto
     Resultado: 
     - Devuelve una lista con los elementos divididos de la cadena de texto
-'''
+"""
 
 texto3 = "La silla es blanca y vale 80"
 
@@ -109,14 +109,14 @@ print('\n')
 
 print('MÉTODO SUB() => SUSTITUTE LAS OCURRENCIAS ENCONTRADAS USANDO UN PATRÓN POR OTRO ELEMENTO')
 print('\n')
-'''
+"""
     Método sub() del módulo re:  Sustituye todas las coincidencias de un patrón por otra cosa en la cadena
     :param patrón
     :param por el valor que se sustituyen las ocurrencias
     :param cadena de texto
     Resultado: 
     - Sustituye por el nuevo elemento si encuentra el patrón, o no sustituye nada si no lo encuentra.
-'''
+"""
 
 texto3 = "La silla es blanca y vale 80"
 

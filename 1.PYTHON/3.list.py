@@ -18,7 +18,7 @@ print(listaVariada[2])
 listaLetras = ["a", "b", "c", "d", "e", "f"]
 print(listaLetras[1:4])
 
-print('\n'*2)
+print('\n' * 2)
 print("------- LISTAS METHODS --------")
 print("- APPEND -")
 # Agregar un elemento al final de la lista APPEND
@@ -30,6 +30,12 @@ print("- INSERT -")
 # Método insert(index, varibla a insertar
 listaLetras.insert(1, "X")
 print("Insert: ", listaLetras)
+
+print("- EXTEND -")
+# Concatena dos listas
+# Método extend(lista)
+listaLetras.extend([1, "X"])
+print("Extend: ", listaLetras)
 
 print("- POP -")
 # Eliminar un elemento en una posición de la lista POP
@@ -70,3 +76,18 @@ print("z" in [1, 2, 3])
 
 # Ver si hay una letra en un string
 print(1 in [1, 2, 3])
+
+
+print('ORDENAR UNA LISTA CON SORT() y SORTED(list)')
+listaA = [3, 4, 1]
+# Método SORT() ordena la lista sin crear una nueva
+listaA.sort()
+print(listaA)
+
+# Método SORTED(list) ordena creando una lista nueva
+listaB = sorted(listaA)
+print(listaB)
+
+import pandas as pd
+df=pd.DataFrame({'a':[1,2,1],'b':[1,1,1]})
+print(df['a']==1)
